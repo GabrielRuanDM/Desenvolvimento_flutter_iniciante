@@ -1,3 +1,5 @@
+import 'package:desenvolvimento_flutter_iniciante/widgets/lista_pessoas.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,11 +13,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+        useMaterial3: false,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Scaffold(),
+      home: Scaffold(
+        appBar: AppBar(title: Text('Meu primeiro app')),
+        body: ListaPessoas(),
+      ),
     );
   }
 }
